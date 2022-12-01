@@ -1,0 +1,22 @@
+ALGORITHM algo_tri
+VAR
+    j,i,temp:INTEGER;
+    tab : ARRAY_OF INTEGER;
+
+BEGIN
+i:=1;
+
+    WHILE (i<tab.length) DO
+       temp:=tab[i];
+       j:=i-1
+       WHILE (j>=0 and tab[j]>temp) DO
+        tab[j+1]:=tab[j];
+        j:=j-1;
+
+       END_WHILE
+       tab[j+1]:=temp;
+       i:=i+1;
+         
+
+    END_WHILE
+END
